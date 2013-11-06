@@ -32,7 +32,7 @@ describe Matrices do
 	
 	describe "# Operaciones sobre matrices" do
 		it "Hay que realizar la suma sobre las matrices" do
-			(@mat3 + @mat4).should eq(@mat5)
+			(@mat3 + @mat4).should ==(@mat5)
 		end
 	end
 end
