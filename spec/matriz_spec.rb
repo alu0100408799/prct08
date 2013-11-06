@@ -12,10 +12,10 @@ describe Matriz do
 
   describe "# Se crean las matrices del tamanio especificado e inicialidas" do
     it "Se establecen correctamente las dimensiones" do
-      @m1.mCol.should == 2
-      @m1.nFil.should == 2
-      @m3.mCol.should == 3
-      @m3.nFil.should == 3
+      @m1.colum.should == 2
+      @m1.fila.should == 2
+      @m3.colum.should == 3
+      @m3.fila.should == 3
 
     end
     it "Se inicializa correctamente" do

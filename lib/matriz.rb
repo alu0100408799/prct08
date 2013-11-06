@@ -2,7 +2,7 @@
 
 class Matriz
 
-  attr_accessor :nFil , :mCol, :matriz
+  attr_accessor :fila , :colum, :matriz
 
   def initialize (matriz)
     @fila = matriz.size
@@ -73,7 +73,7 @@ class Matriz
 
   #Metodo para sumar dos matrices
   def +(mat)
-    if (mat.nFil == @fila && mat.mCol == @colum)
+    if (mat.fila == @fila && mat.colum == @colum)
       aux = Matriz.new(@matriz)
       for i in 0...@fila do
         for j in 0...@colum do
@@ -88,7 +88,7 @@ class Matriz
 
   # Metodo para restar dos matrices
   def -(mat)
-    if (mat.nFil == @fila && mat.mCol == @colum)
+    if (mat.fila == @fila && mat.colum == @colum)
       aux = Matriz.new(@matriz)
       for i in 0...@fila do
         for j in 0...@colum do
@@ -107,7 +107,7 @@ class Matriz
       result = Array.new
       for i in 0...@fila do
         result[i] = Array.new
-        for j in 0...mat.mCol do
+        for j in 0...mat.colum do
            result[i][j] = 0
         end
       end
@@ -115,7 +115,7 @@ class Matriz
       aux = Matriz.new(result)
 
       for i in 0...@fila do
-        for j in 0...mat.mCol do
+        for j in 0...mat.colum do
           for z in 0...@colum do
             aux.matriz[i][j] += @matriz[i][z] * mat.matriz[z][j]
           end
