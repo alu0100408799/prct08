@@ -1,23 +1,15 @@
 $:.unshift File.dirname(__FILE__) + 'lib'
-$:.unshift './lib', './spec'
-
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new
-task :default => :spec
 
-desc "Ejecutar las expectativas de la clase Matriz"
-task :spec do
-	sh "rspec -I. spec/matriz_spec.rb"
+task :default => :tu
+
+desc "Pruebas unitarias de la clase Matriz"
+task :tu do
+        sh "rspec -I. spec/matriz_spec.rb"
 end
 
-task :bin do
-	sh "./lib/matriz.rb"
-end
-
-task :test do
-	sh "rspec -I. spec/matriz_spec.rb --format documentation"
-end
-
-task :thtml do
-	sh "rspec -I. spec/matriz_spec.rb --format html"
+desc "Ejecutar con documentacion"
+task :doc do
+        sh "rspec -I. spec/matriz_spec.rb --format documentation"
 end
