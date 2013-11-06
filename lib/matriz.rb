@@ -103,7 +103,7 @@ class Matriz
 
   # Metodo para multiplicar dos matrices
   def *(mat)
-    if (@colum == mat.nFil)
+    if (@colum == mat.fila)
       result = Array.new
       for i in 0...@fila do
         result[i] = Array.new
