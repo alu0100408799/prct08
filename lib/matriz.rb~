@@ -1,6 +1,5 @@
 #!  /usr/local/ruby/bin/ruby 
 
-require 'racional.rb'
 
 class Matriz
 
@@ -110,11 +109,7 @@ class Matriz
       for i in 0...@fila do
         result[i] = Array.new
         for j in 0...mat.colum do
-	  if(mat.matriz[0][0].class == Fraccion)
-	    result[i][j] = Fraccion.new(0,1)
-	  else
-	    result[i][j] = 0
-	  end
+           result[i][j] = 0
         end
       end
 

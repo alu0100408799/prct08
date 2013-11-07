@@ -1,6 +1,6 @@
 require 'matriz'
 require 'rspec'
-#comentario de prueba
+
 
 describe Matriz do
   
@@ -20,8 +20,8 @@ describe Matriz do
       @m1.fila.should == 2
       @m3.colum.should == 3
       @m3.fila.should == 3
-      @m5.colum.should == 2
-      @m5.fila.should == 2
+      @m5.mCol.should == 2
+      @m5.nFil.should == 2
 
     end
     it "Se inicializa correctamente" do
